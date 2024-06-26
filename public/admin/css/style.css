@@ -1,0 +1,46 @@
+#login{
+    height: 600px;
+    align-items: center;
+    display: flex;
+}
+
+#login h2{
+    text-align: center;
+    color: rgb(40, 134, 56);
+}
+
+#login button{
+    margin-top: 10px;
+}
+
+#header{
+    background-color: blue;
+    padding: 10px 0px;
+}
+
+#header h2{
+    color: #fff;
+}
+
+.bi-pencil{
+color: green;
+font-size: 25px;
+}
+.bi-trash3{
+color: red;
+font-size: 25px;
+}
+
+#mid h2{
+    text-align: center;
+    color: rgb(49, 150, 24);
+}
+
+.logout-button{
+    float: right;
+}
+
+
+.testinominal-btn{
+    width: 100px;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%-include("../../partials/admin/header.ejs")%>
+
+<body>
+    <%-include("../../partials/admin/header1.ejs")%>
+    <section id="mid">
+        <div class="container">
+            <div class="row">
+                <%-include("../../partials/admin/left.ejs")%>
+               <div class="col-md-9">
+                <h2>Query Form</h2>
+                <p><%=message%></p>
+                <form action="" method="post">
+                    <label for="">To</label>
+                    <input type="text" name="emailto" id="" class="form-control" value="<%=email%>">
+                    <label for="">From</label>
+                    <input type="text" name="emailfrom" id="" class="form-control" value="rakeshbijarniya785@gmail.com" >
+                    <label for="">Subject</label>
+                    <input type="text" name="emailsub" id="" class="form-control" value="RE:<%=query%>"> 
+                    <label for="">Body</label>
+                    <textarea name="emailbody" id="" class="form-control"></textarea>
+                    <button type="submit" class="form-control btn btn-dark mt-2">Send Email</button>
+                </form>
+               </div>
+            </div>
+        </div>
+    </section>
+</body>
+</body>
+</html>

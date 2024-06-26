@@ -1,0 +1,28 @@
+<%-include("../../partials/admin/header.ejs")%>
+
+<body>
+    <%-include("../../partials/admin/header1.ejs")%>
+    <section id="mid">
+        <div class="container">
+            <div class="row">
+                <%-include("../../partials/admin/left.ejs")%>
+               <div class="col-md-9">
+                <h2>New Service Add Here</h2>
+                <p><%=message%></p>
+                <form action="" method="post" enctype="multipart/form-data">
+                    <label for="">Image</label>
+                    <input type="file" name="img" id="" class="form-control">
+                    <label>Service Name</label>
+                    <input type="text" name="name" id="" class="form-control">
+                    <label for="">Description</label>
+                     <input type="text" name="desc" id="" class="form-control">
+                     <label for="">More Description</label>
+                     <textarea name="mdesc" id="" class="form-control mb-2"></textarea>
+                    
+                    <button type="submit" class="btn btn-warning form-control">Add Banner</button>
+                </form>
+               </div>
+            </div>
+        </div>
+    </section>
+</body>

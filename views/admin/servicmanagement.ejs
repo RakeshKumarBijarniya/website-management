@@ -1,0 +1,62 @@
+<%-include("../../partials/admin/header.ejs")%>
+
+<body>
+    <%-include("../../partials/admin/header1.ejs")%>
+    <section id="mid">
+        <div class="container">
+            <div class="row">
+                <%-include("../../partials/admin/left.ejs")%>
+               <div class="col-md-9">
+                <h2>Service Management</h2>
+                <table class="table table-hover">
+                    <tr>
+                        <th>
+                            Total Service:<%=totalServiceRecord%>
+                        </th>
+                        <th>
+                            Total Published Service:<%=totalPublishRecord%>
+                        </th>
+                        <th>
+                            Total Unpublished Service:<%=totalUnpublishRecord%>
+                        </th>
+                    </tr>
+                </table>
+                <a href="/admin/newService"><button class="form-control btn-primary">Add New Service Here</button></a>
+                <table class="table table-hover">
+                    <tr>
+                        <th>S.No.</th>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>More Description</th>
+                        <th>Created Date</th>
+                        <th>Status</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                    <%data.forEach((val,key)=>{%>
+                        <tr>
+                            <td><%=key+1%></td>
+                            <td><img src="/upload/<%=val.image%>" style="width: 60px;" alt=""></td>
+                            <td><%=val.name%></td>
+                            <td><%=val.desc%></td>
+                            <td><%=val.mdesc%></td>
+                            <td><%=val.createDate%></td>
+                            <td><a href="/admin/serviceStatusUpdate/<%=val.id%>/<%=val.status%>"><button class="publish-button btn btn-primary"><%=val.status%></button></a></td>
+                            <td><a href="/admin/serviceupdate/<%=val.id%>"><i class="bi bi-pencil"></i></a></td>  
+                            <td><a href="/admin/serviceDelete/<%=val.id%>/<%=val.image%>"><i class="bi bi-trash3"></i></a></td>
+                        </tr>
+                        
+                        <%})%>
+
+                        <%if(message!==""){%>
+                           <tr>
+                               <td colspan="9"><h4 class="text-center"><%=message%></h4></td>
+                           </tr>
+                        <%}%>
+                </table>
+               </div>
+            </div>
+        </div>
+    </section>
+</body>

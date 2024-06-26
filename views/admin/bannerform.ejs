@@ -1,0 +1,29 @@
+<%-include("../../partials/admin/header.ejs")%>
+
+<body>
+    <%-include("../../partials/admin/header1.ejs")%>
+    <section id="mid">
+        <div class="container">
+            <div class="row">
+                <%-include("../../partials/admin/left.ejs")%>
+               <div class="col-md-9">
+                <h2>New Banner Add Here</h2>
+                <h2><%=message%></h2>
+               
+                <form action="" method="post" enctype="multipart/form-data">
+                    <label for="">Banner Title</label>
+                    <input type="text" name="title" id="" class="form-control" >
+                    <label for="">Description</label>
+                    <input type="text" name="desc" id=""  class="form-control">
+                    <label for="">More Details</label>
+                    <textarea name="mdesc" id=""  class="form-control"></textarea>
+                    <label for="">Image</label>
+                    <input type="file" src="" alt="" name="img" class="form-control mb-2"> 
+                    <button type="reset" class="btn btn-danger">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add Banner</button>
+                </form>
+               </div>
+            </div>
+        </div>
+    </section>
+</body>
